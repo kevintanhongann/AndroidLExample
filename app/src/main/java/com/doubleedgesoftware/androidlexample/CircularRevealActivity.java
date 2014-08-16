@@ -32,10 +32,17 @@ public class CircularRevealActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reveal);
         ButterKnife.inject(this);
-        revealBtn.setOnClickListener(new View.OnClickListener() {
+        /*revealBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+            }
+        });*/
+
+        revealBtn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
                 ViewAnimationUtils.createCircularReveal(testView, testView.getRight(), testView.getBottom(), testView.getHeight(), testView.getWidth() / 2).start();
+                return true;
             }
         });
     }
