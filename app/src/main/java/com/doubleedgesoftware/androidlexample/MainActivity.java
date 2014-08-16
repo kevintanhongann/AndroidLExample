@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
     @InjectView(R.id.button_palette)
     Button mPaletteBtn;
 
-    @InjectView(R.id.button_reveal)
+    @InjectView(R.id.button_revealactivity)
     Button mCircularRevealBtn;
 
     @Override

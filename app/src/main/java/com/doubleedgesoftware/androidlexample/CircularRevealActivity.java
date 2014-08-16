@@ -15,7 +15,6 @@ import butterknife.InjectView;
  */
 public class CircularRevealActivity extends Activity {
 
-
     @InjectView(R.id.view_test)
     View testView;
 
@@ -25,12 +24,18 @@ public class CircularRevealActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reveal);
         ButterKnife.inject(this);
         revealBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ViewAnimationUtils.createCircularReveal(testView, 0, 0, 0, 0);
+                ViewAnimationUtils.createCircularReveal(testView, testView.getRight(), testView.getBottom(), testView.getHeight(), testView.getWidth() / 2).start();
             }
         });
     }

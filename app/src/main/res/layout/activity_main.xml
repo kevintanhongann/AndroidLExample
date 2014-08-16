@@ -21,7 +21,7 @@
             android:id="@+id/button_palette"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    <Button android:id="@+id/button_reveal"
+    <Button android:id="@+id/button_revealactivity"
             android:text="Circular Reveal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
